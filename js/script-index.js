@@ -16,7 +16,11 @@ printNews();
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
+	recipesArray.forEach(function(elements){
+		if(elements.highlighted == true){
+			renderRecipe(elements);
+		}  
+	})
 }
 
 /*
